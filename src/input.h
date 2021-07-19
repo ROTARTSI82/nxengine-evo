@@ -56,6 +56,7 @@ enum INPUTS
 #define DEBUG_MOVE_KEY F2KEY
 #define DEBUG_SAVE_KEY F4KEY
 #define FFWDKEY F5KEY
+#define DEBUG_NOCLIP_KEY F3KEY
 
 extern bool inputs[INPUT_COUNT];
 extern bool lastinputs[INPUT_COUNT];

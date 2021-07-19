@@ -34,6 +34,7 @@ static struct
 
 static int ndebugmarks = 0;
 std::vector<std::string> DebugList;
+static int prev_mode = -1;
 
 void DrawDebug(void)
 {
@@ -51,6 +52,15 @@ void DrawDebug(void)
       game_save(settings->last_save_slot);
       NXE::Sound::SoundManager::getInstance()->playSfx(NXE::Sound::SFX::SND_SWITCH_WEAPON);
       console.Print("Game saved.");
+    }
+
+    if (justpushed(DEBUG_NOCLIP_KEY)) {
+      if (player->movementmode != 2) {
+        prev_mode = player->movementmode;
+        player->movementmode = 2;
+      } else {
+        player->movementmode = prev_mode;
+      }
     }
 
     if (justpushed(F6KEY))

@@ -14,5 +14,9 @@
   {
     "name":"Ridiculon",
     "dir":"Ogg_ridic/"
+  },
+  {
+    "name":"Silvagunner",
+    "dir":"Ogg_gilva/"
   }
 ]
